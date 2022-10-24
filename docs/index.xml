@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Hoang-Chau Luong</title>
+    <link>https://lhchau.github.io/my-website/</link>
+    <atom:link href="https://lhchau.github.io/my-website/index.xml" rel="self" type="application/rss+xml"/>
+    <description>"Statistics, Data, R programming"
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>2022-05-10 TidyTuesday NYT titles</title>
+      <dc:creator>Hoang-Chau Luong</dc:creator>
+      <link>https://lhchau.github.io/my-website/posts/2022-10-24-20220510nyttitles</link>
+      <description>Analysis and visualization</description>
+      <guid>https://lhchau.github.io/my-website/posts/2022-10-24-20220510nyttitles</guid>
+      <pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://lhchau.github.io/my-website/posts/2022-10-24-20220510nyttitles/preview.png" medium="image" type="image/png" width="1344" height="960"/>
+    </item>
+  </channel>
+</rss>

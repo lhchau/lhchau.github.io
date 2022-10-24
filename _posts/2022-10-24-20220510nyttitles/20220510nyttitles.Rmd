@@ -1,0 +1,44 @@
+---
+title: "2022-05-10 TidyTuesday NYT titles"
+description: |
+  Analysis and visualization
+date: "`r Sys.Date()`"
+author: "Hoang-Chau Luong"
+preview: preview.png
+output: 
+  distill::distill_article:
+    self_contained: false
+    highlight: haddock
+    highlight_downlit: false
+    code_folding: true
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  comment = "##",
+  R.options = list(width = 60)
+)
+```
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(tidytext)
+
+theme_set(theme_light())
+```
+
+
+```{r, layout="l-body-outset"}
+library(rmarkdown)
+
+tuesday <- tidytuesdayR::tt_load('2022-05-10')
+nyt_titles <- tuesday$nyt_titles
+
+paged_table(nyt_titles)
+```

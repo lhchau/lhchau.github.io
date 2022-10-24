@@ -1,14 +1,29 @@
-name: "my-website"
-title: "My Website"
+name: "Hoang-Chau Luong"
+title: "Hoang-Chau Luong"
 description: |
-  My Website
+  "Statistics, Data, R programming"
 output_dir: "docs"
 navbar:
+  logo: 
+    image: img/hc_logo.png
+    href: index.html
+  search: true
   right:
-    - text: "Home"
-      href: index.html
+    # - text: "Home"
+    #   href: index.html
     - text: "About"
       href: about.html
-    - text: "Projects"
-      href: projects.html
-output: distill::distill_article
+    - text: "Documents"
+      href: documents.html
+    - text: "TidyTuesday"
+      href: tidytuesday.html
+    - icon: fab fa-github-alt fa-1x
+      href: https://github.com/lhchau
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/hoang-chau-luong-531178201/
+output: 
+  distill::distill_article:
+    css: styles.css
+    anchor_sections: FALSE
+base_url: https://lhchau.github.io/my-website/
+repository_url: https://github.com/lhchau/my-website
