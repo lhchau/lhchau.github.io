@@ -112,7 +112,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["preview.png"]}
+  {"type":"character","attributes":{},"value":["20220510nyttitles_files/anchor-4.2.2/anchor.min.js","20220510nyttitles_files/bowser-1.9.3/bowser.min.js","20220510nyttitles_files/distill-2.2.21/template.v2.js","20220510nyttitles_files/header-attrs-2.17/header-attrs.js","20220510nyttitles_files/jquery-3.6.0/jquery-3.6.0.js","20220510nyttitles_files/jquery-3.6.0/jquery-3.6.0.min.js","20220510nyttitles_files/jquery-3.6.0/jquery-3.6.0.min.map","20220510nyttitles_files/pagedtable-1.1/css/pagedtable.css","20220510nyttitles_files/pagedtable-1.1/js/pagedtable.js","20220510nyttitles_files/popper-2.6.0/popper.min.js","20220510nyttitles_files/tippy-6.2.7/tippy-bundle.umd.min.js","20220510nyttitles_files/tippy-6.2.7/tippy-light-border.css","20220510nyttitles_files/tippy-6.2.7/tippy.css","20220510nyttitles_files/tippy-6.2.7/tippy.umd.min.js","20220510nyttitles_files/webcomponents-2.0.0/webcomponents.js","preview.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1516,50 +1516,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </div>
 
 <div class="d-article">
-<div class="layout-chunk" data-layout="l-body">
-<details>
-<summary>
-Show code
-</summary>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-</details>
-<pre><code>## ── Attaching packages ─────────────────── tidyverse 1.3.2 ──
-## ✔ ggplot2 3.3.6      ✔ purrr   0.3.5 
-## ✔ tibble  3.1.8      ✔ dplyr   1.0.10
-## ✔ tidyr   1.2.1      ✔ stringr 1.4.1 
-## ✔ readr   2.1.3      ✔ forcats 0.5.2 
-## ── Conflicts ────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()</code></pre>
-<details>
-<summary>
-Show code
-</summary>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code></pre></div>
-</details>
-<pre><code>## 
-## Attaching package: &#39;lubridate&#39;
-## 
-## The following objects are masked from &#39;package:base&#39;:
-## 
-##     date, intersect, setdiff, union</code></pre>
-<details>
-<summary>
-Show code
-</summary>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_light</span>())</span></code></pre></div>
-</details>
-</div>
 <div class="layout-chunk" data-layout="l-body-outset">
 <details>
 <summary>
 Show code
 </summary>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>tuesday <span class="ot">&lt;-</span> tidytuesdayR<span class="sc">::</span><span class="fu">tt_load</span>(<span class="st">&#39;2022-05-10&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>tuesday <span class="ot">&lt;-</span> tidytuesdayR<span class="sc">::</span><span class="fu">tt_load</span>(<span class="st">&#39;2022-05-10&#39;</span>)</span></code></pre></div>
 </details>
 <pre><code>## --- Compiling #TidyTuesday Information for 2022-05-10 ----</code></pre>
 <pre><code>## --- There are 2 files available ---</code></pre>
@@ -1576,9 +1538,9 @@ Show code
 <summary>
 Show code
 </summary>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>nyt_titles <span class="ot">&lt;-</span> tuesday<span class="sc">$</span>nyt_titles</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">paged_table</span>(nyt_titles)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>nyt_titles <span class="ot">&lt;-</span> tuesday<span class="sc">$</span>nyt_titles</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">paged_table</span>(nyt_titles)</span></code></pre></div>
 </details>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">

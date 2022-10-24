@@ -11,9 +11,9 @@
     ],
     "date": "2022-10-24",
     "categories": [],
-    "contents": "\n\n\nShow code\nlibrary(tidyverse)\n## ── Attaching packages ─────────────────── tidyverse 1.3.2 ──\n## ✔ ggplot2 3.3.6      ✔ purrr   0.3.5 \n## ✔ tibble  3.1.8      ✔ dplyr   1.0.10\n## ✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n## ✔ readr   2.1.3      ✔ forcats 0.5.2 \n## ── Conflicts ────────────────────── tidyverse_conflicts() ──\n## ✖ dplyr::filter() masks stats::filter()\n## ✖ dplyr::lag()    masks stats::lag()\n\nShow code\nlibrary(lubridate)\n## \n## Attaching package: 'lubridate'\n## \n## The following objects are masked from 'package:base':\n## \n##     date, intersect, setdiff, union\n\nShow code\nlibrary(tidytext)\n\ntheme_set(theme_light())\n\n\n\nShow code\nlibrary(rmarkdown)\n\ntuesday <- tidytuesdayR::tt_load('2022-05-10')\n## --- Compiling #TidyTuesday Information for 2022-05-10 ----\n## --- There are 2 files available ---\n## --- Starting Download ---\n## \n##  Downloading file 1 of 2: `nyt_titles.tsv`\n##  Downloading file 2 of 2: `nyt_full.tsv`\n## Warning: One or more parsing issues, call `problems()` on your data\n## frame for details, e.g.:\n##   dat <- vroom(...)\n##   problems(dat)\n## --- Download complete ---\n\nShow code\nnyt_titles <- tuesday$nyt_titles\n\npaged_table(nyt_titles)\n\n\n\n\n\n",
+    "contents": "\n\n\nShow code\ntuesday <- tidytuesdayR::tt_load('2022-05-10')\n## --- Compiling #TidyTuesday Information for 2022-05-10 ----\n## --- There are 2 files available ---\n## --- Starting Download ---\n## \n##  Downloading file 1 of 2: `nyt_titles.tsv`\n##  Downloading file 2 of 2: `nyt_full.tsv`\n## Warning: One or more parsing issues, call `problems()` on your data\n## frame for details, e.g.:\n##   dat <- vroom(...)\n##   problems(dat)\n## --- Download complete ---\n\nShow code\nnyt_titles <- tuesday$nyt_titles\n\npaged_table(nyt_titles)\n\n\n\n\n\n",
     "preview": "posts/2022-10-24-20220510nyttitles/preview.png",
-    "last_modified": "2022-10-24T14:43:12+07:00",
+    "last_modified": "2022-10-24T15:15:49+07:00",
     "input_file": {},
     "preview_width": 1344,
     "preview_height": 960
