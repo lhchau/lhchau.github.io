@@ -6,7 +6,7 @@ subtitle: Undergraduate from the Advanced Program in Computer Science (APCS), at
 
 profile:
   align: right
-  image: chau.jpg
+  image: chau.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
 
