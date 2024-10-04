@@ -1,25 +1,24 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Undergraduate from the Advanced Program in Computer Science (APCS), at <a>University of Science, Ho Chi Minh City</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: chau.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I recently graduated from the Advanced Program in Computer Science at the University of Science, Ho Chi Minh City, one of the top 10 undergraduate programs in Vietnam. You can explore my [Publications](https://scholar.google.com/citations?user=j4ck-L4AAAAJ)
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research focuses on deep learning, particularly on improving the efficiency of training deep neural networks and enhancing their generalization capabilities. In previous work, I studied optimization behaviors, analyzing how optimizers like SGD and SAM differ in performance and how these differences impact efficiency and generalization. This research was conducted through empirical studies on small-scale datasets. Currently, my work includes, but is not limited to:
+1. Exploring optimization methods in out-of-distribution (OOD) or noisy label tasks to improve robustness.
+2. Exploring the behavior of optimization in large language models to enhance both training efficiency and generalization.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am seeking a PhD position starting in 2025. Please contact me through email if you are interested in my research!
