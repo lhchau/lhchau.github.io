@@ -12,7 +12,7 @@ profile:
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 ---
 
 I recently graduated from the Advanced Program in Computer Science at the University of Science, Ho Chi Minh City, one of the top 10 undergraduate programs in Vietnam. You can explore my [Publications](https://scholar.google.com/citations?user=j4ck-L4AAAAJ)
@@ -21,4 +21,4 @@ My research focuses on deep learning, particularly on improving the efficiency o
 1. Exploring optimization methods in out-of-distribution (OOD) or noisy label tasks to improve robustness.
 2. Exploring the behavior of optimization in large language models to enhance both training efficiency and generalization.
 
-I am seeking a PhD position starting in 2025. Please contact me through email if you are interested in my research!
+I am seeking a PhD position starting in 2025. Please contact me through [email](lhchau20@apcs.fitus.edu.vn) if you are interested in my research!
