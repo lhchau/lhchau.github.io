@@ -9,6 +9,8 @@ profile:
   image: chau.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
+    <p>lhchau20 (at) apcs (dot) fitus (dot) edu (dot) vn</p>
+  
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -21,4 +23,4 @@ My research focuses on deep learning, particularly on improving the efficiency o
 1. Exploring optimization methods in out-of-distribution (OOD) or noisy label tasks to improve robustness.
 2. Exploring the behavior of optimization in large language models to enhance both training efficiency and generalization.
 
-I am seeking a PhD position starting in 2025. Please contact me through [email](lhchau20@apcs.fitus.edu.vn) if you are interested in my research!
+I am seeking a PhD position starting in 2025. Please contact me through email if you are interested in my research!
