@@ -9,12 +9,12 @@ profile:
   image: chau.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>lhchau20 (at) apcs (dot) fitus (dot) edu (dot) vn</p>
+    lhchau20 (at) apcs (dot) fitus (dot) edu (dot) vn
   
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 ---
 
 I recently graduated from the Advanced Program in Computer Science at the University of Science, Ho Chi Minh City, one of the top 10 undergraduate programs in Vietnam. You can explore my [Publications](https://scholar.google.com/citations?user=j4ck-L4AAAAJ)
