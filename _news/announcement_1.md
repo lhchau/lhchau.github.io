@@ -6,6 +6,6 @@ related_posts: false
 ---
 
 <p>
-  Our paper, <strong>Improving Resistance to Noisy Label Fitting by Reweighting Gradients in SAM</strong>, has been <strong><span style="color: #4400ff;">submitted</span></strong> in International Conference on Learning Representations (ICLR) 2025.
+  Our paper, <strong>Improving Resistance to Noisy Label Fitting by Reweighting Gradients in SAM</strong>, is <strong><span style="color: #4400ff;">submitted</strong>.
 </p>
 :rocket: :rocket: :rocket:
