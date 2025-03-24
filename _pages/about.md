@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Undergraduate from the Advanced Program in Computer Science (APCS), at <a>University of Science, Ho Chi Minh City</a>
+subtitle: 
 
 profile:
   align: right
