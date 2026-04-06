@@ -3,22 +3,6 @@
 
 @string{aps = {American Physical Society,}}
 
-@article{klmtneurips,
-  abbr={Conference},
-  title={Fundamental Convergence Analysis of Sharpness-Aware Minimization},
-  author={Khanh, Pham Duy and Luong, Hoang-Chau and Mordukhovich, Boris S and Tran, Dat Ba},
-  abstract={The paper investigates the fundamental convergence properties of Sharpness-Aware Minimization (SAM), a recently proposed gradient-based optimization method (Foret et al., 2021) that significantly improves the generalization of deep neural networks. The convergence properties including the stationarity of accumulation points, the convergence of the sequence of gradients to the origin, the sequence of function values to the optimal value, and the sequence of iterates to the optimal solution are established for the method. The universality of the provided convergence analysis based on inexact gradient descent frameworks (Khanh et al., 2023b) allows its extensions to the normalized versions of SAM such as VaSSO (Li & Giannakis, 2023), RSAM (Liu et al., 2022), and to the unnormalized versions of SAM such as USAM (Andriushchenko & Flammarion, 2022). Numerical experiments are conducted on classification tasks using deep learning models to confirm the practical aspects of our analysis.},
-  journal={Advances in Neural Information Processing Systems},
-  year={2024},
-  url={https://arxiv.org/abs/2401.08060},
-  html={https://nips.cc/virtual/2024/poster/95276},
-  altmetric={},
-  dimensions={true},
-  google_scholar_id={9yKSN-GCB0IC},
-  selected={true},
-  bibtex_show={true},
-}
-
 @article{luong2026lora,
   abbr={Conference},
   title={Why LoRA Fails to Forget: Regularized Low-Rank Adaptation Against Backdoors in Language Models},
@@ -34,10 +18,10 @@
   bibtex_show={true},
 }
 
-@article{luong2026lora,
+@article{luong2026understandingsamsrobustnessnoisy,
   abbr={Conference},
   title={Understanding SAM's Robustness to Noisy Labels through Gradient Down-weighting},
-  author={Hoang-Chau Luong, and Lingwei Chen},
+  author={Hoang-Chau Luong, Thuc Nguyen-Quang, Dat Ba Tran, and Minh-Triet Tran},
   abstract={Sharpness-Aware Minimization (SAM) was introduced to improve generalization by seeking flat minima, yet it also exhibits robustness to label noise, a phenomenon that remains only partially understood. Prior work has mainly attributed this effect to SAM's tendency to prolong the learning of clean samples. In this work, we provide a complementary explanation by analyzing SAM at the element-wise level. We show that when noisy gradients dominate a parameter direction, their influence is reduced by the stronger amplification of clean gradients. This slows the memorization of noisy labels while sustaining clean learning, offering a more complete account of SAM's robustness. Building on this insight, we propose SANER (Sharpness-Aware Noise-Explicit Reweighting), a simple variant of SAM that explicitly magnifies this down-weighting effect. Experiments on benchmark image classification tasks with noisy labels demonstrate that SANER significantly mitigates noisy-label memorization and improves generalization over both SAM and SGD. Moreover, since SANER is designed from the mechanism of SAM, it can also be seamlessly integrated into SAM-like variants, further boosting their robustness.},
   journal={International Conference on Artificial Intelligence and Statistics},
   year={2026},
@@ -45,6 +29,22 @@
   altmetric={},
   dimensions={true},
   google_scholar_id={IjCSPb-OGe4C},
+  selected={true},
+  bibtex_show={true},
+}
+
+@article{klmtneurips,
+  abbr={Conference},
+  title={Fundamental Convergence Analysis of Sharpness-Aware Minimization},
+  author={Khanh, Pham Duy and Luong, Hoang-Chau and Mordukhovich, Boris S and Tran, Dat Ba},
+  abstract={The paper investigates the fundamental convergence properties of Sharpness-Aware Minimization (SAM), a recently proposed gradient-based optimization method (Foret et al., 2021) that significantly improves the generalization of deep neural networks. The convergence properties including the stationarity of accumulation points, the convergence of the sequence of gradients to the origin, the sequence of function values to the optimal value, and the sequence of iterates to the optimal solution are established for the method. The universality of the provided convergence analysis based on inexact gradient descent frameworks (Khanh et al., 2023b) allows its extensions to the normalized versions of SAM such as VaSSO (Li & Giannakis, 2023), RSAM (Liu et al., 2022), and to the unnormalized versions of SAM such as USAM (Andriushchenko & Flammarion, 2022). Numerical experiments are conducted on classification tasks using deep learning models to confirm the practical aspects of our analysis.},
+  journal={Advances in Neural Information Processing Systems},
+  year={2024},
+  url={https://arxiv.org/abs/2401.08060},
+  html={https://nips.cc/virtual/2024/poster/95276},
+  altmetric={},
+  dimensions={true},
+  google_scholar_id={9yKSN-GCB0IC},
   selected={true},
   bibtex_show={true},
 }
