@@ -18,3 +18,33 @@
   selected={true},
   bibtex_show={true},
 }
+
+@article{luong2026lora,
+  abbr={Conference},
+  title={Why LoRA Fails to Forget: Regularized Low-Rank Adaptation Against Backdoors in Language Models},
+  author={Hoang-Chau Luong, and Lingwei Chen},
+  abstract={Low-Rank Adaptation (LoRA) is widely used for parameter-efficient fine-tuning of large language models, but it is notably ineffective at removing backdoor behaviors from poisoned pretrained models when fine-tuning on clean dataset. Contrary to the common belief that this weakness is caused primarily by low rank, we show that LoRA's vulnerability is fundamentally spectral. Our analysis identifies two key factors: LoRA updates (i) possess insufficient spectral strength, with singular values far below those of pretrained weights, and (ii) exhibit unfavorable spectral alignment, weakly matching clean-task directions while retaining overlap with trigger-sensitive subspaces. We further establish a critical scaling threshold beyond which LoRA can theoretically suppress trigger-induced activations, and we show empirically that standard LoRA rarely reaches this regime. We introduce Regularized Low-Rank Adaptation (RoRA), which improves forgetting by increasing spectral strength and correcting alignment through clean-strengthened regularization, trigger-insensitive constraints, and post-training spectral rescaling. Experiments across multiple NLP benchmarks and attack settings show that RoRA substantially reduces attack success rates while maintaining clean accuracy.},
+  journal={Association for Computational Linguistics},
+  year={2026},
+  url={https://arxiv.org/pdf/2601.06305},
+  altmetric={},
+  dimensions={true},
+  google_scholar_id={zYLM7Y9cAGgC},
+  selected={true},
+  bibtex_show={true},
+}
+
+@article{luong2026lora,
+  abbr={Conference},
+  title={Understanding SAM's Robustness to Noisy Labels through Gradient Down-weighting},
+  author={Hoang-Chau Luong, and Lingwei Chen},
+  abstract={Sharpness-Aware Minimization (SAM) was introduced to improve generalization by seeking flat minima, yet it also exhibits robustness to label noise, a phenomenon that remains only partially understood. Prior work has mainly attributed this effect to SAM's tendency to prolong the learning of clean samples. In this work, we provide a complementary explanation by analyzing SAM at the element-wise level. We show that when noisy gradients dominate a parameter direction, their influence is reduced by the stronger amplification of clean gradients. This slows the memorization of noisy labels while sustaining clean learning, offering a more complete account of SAM's robustness. Building on this insight, we propose SANER (Sharpness-Aware Noise-Explicit Reweighting), a simple variant of SAM that explicitly magnifies this down-weighting effect. Experiments on benchmark image classification tasks with noisy labels demonstrate that SANER significantly mitigates noisy-label memorization and improves generalization over both SAM and SGD. Moreover, since SANER is designed from the mechanism of SAM, it can also be seamlessly integrated into SAM-like variants, further boosting their robustness.},
+  journal={International Conference on Artificial Intelligence and Statistics},
+  year={2026},
+  url={https://arxiv.org/pdf/2411.17132},
+  altmetric={},
+  dimensions={true},
+  google_scholar_id={IjCSPb-OGe4C},
+  selected={true},
+  bibtex_show={true},
+}
