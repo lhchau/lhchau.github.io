@@ -21,7 +21,7 @@
 @article{luong2026understandingsamsrobustnessnoisy,
   abbr={Conference},
   title={Understanding SAM's Robustness to Noisy Labels through Gradient Down-weighting},
-  author={Hoang-Chau Luong, Thuc Nguyen-Quang, Dat Ba Tran, and Minh-Triet Tran},
+  author={Luong, Hoang-Chau and Nguyen-Quang, Thuc and Tran, Dat Ba and Tran, Minh-Triet},
   abstract={Sharpness-Aware Minimization (SAM) was introduced to improve generalization by seeking flat minima, yet it also exhibits robustness to label noise, a phenomenon that remains only partially understood. Prior work has mainly attributed this effect to SAM's tendency to prolong the learning of clean samples. In this work, we provide a complementary explanation by analyzing SAM at the element-wise level. We show that when noisy gradients dominate a parameter direction, their influence is reduced by the stronger amplification of clean gradients. This slows the memorization of noisy labels while sustaining clean learning, offering a more complete account of SAM's robustness. Building on this insight, we propose SANER (Sharpness-Aware Noise-Explicit Reweighting), a simple variant of SAM that explicitly magnifies this down-weighting effect. Experiments on benchmark image classification tasks with noisy labels demonstrate that SANER significantly mitigates noisy-label memorization and improves generalization over both SAM and SGD. Moreover, since SANER is designed from the mechanism of SAM, it can also be seamlessly integrated into SAM-like variants, further boosting their robustness.},
   journal={International Conference on Artificial Intelligence and Statistics},
   year={2026},
