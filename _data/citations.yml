@@ -1,0 +1,7 @@
+# Last known Google Scholar citation counts, keyed by google_scholar_id in _bibliography/papers.bib.
+# Google Scholar blocks the GitHub Actions build server, so the badge falls back to these numbers.
+# The badge shows the higher of this number and the live count. Update occasionally from
+# https://scholar.google.com/citations?user=j4ck-L4AAAAJ
+"9yKSN-GCB0IC": 35 # Fundamental Convergence Analysis of SAM (NeurIPS 2024)
+"IjCSPb-OGe4C": 1 # SAM's Robustness to Noisy Labels (AISTATS 2026)
+"zYLM7Y9cAGgC": 2 # Why LoRA Fails to Forget (ACL 2026 Findings)

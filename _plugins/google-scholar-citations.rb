@@ -21,6 +21,8 @@ module Jekyll
       article_id = context[@article_id.strip]
       scholar_id = context[@scholar_id.strip]
       article_url = "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=#{scholar_id}&citation_for_view=#{scholar_id}:#{article_id}"
+      # Last known count from _data/citations.yml, for when Scholar blocks the request (e.g. on CI runners)
+      fallback = context.registers[:site].data.dig("citations", article_id)
 
       begin
           # If the citation count has already been fetched, return it
@@ -58,11 +60,13 @@ module Jekyll
             end
           end
 
+        # A blocked/captcha page parses as 0, so never show less than the stored count
+        citation_count = [citation_count, fallback.to_i].max
         citation_count = Helpers.number_to_human(citation_count, :format => '%n%u', :precision => 2, :units => { :thousand => 'K', :million => 'M', :billion => 'B' })
 
       rescue Exception => e
         # Handle any errors that may occur during fetching
-        citation_count = "N/A"
+        citation_count = fallback.nil? ? "N/A" : Helpers.number_to_human(fallback, :format => '%n%u', :precision => 2, :units => { :thousand => 'K', :million => 'M', :billion => 'B' })
 
         # Print the error message including the exception class and message
         puts "Error fetching citation count for #{article_id}: #{e.class} - #{e.message}"
