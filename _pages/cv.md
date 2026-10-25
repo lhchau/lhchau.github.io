@@ -1,11 +1,11 @@
 ---
-layout: cv
-permalink: /assets/pdf/CV.pdf
+layout: page
+permalink: /cv/
 title: CV
 nav: true
 nav_order: 3
-cv_pdf: CV.pdf
-description: My curriculum vitae.
-toc:
-  sidebar: left
+redirect: /assets/pdf/CV.pdf
+description: Redirecting to my CV.
 ---
+
+If you are not redirected automatically, [open my CV (PDF)]({{ '/assets/pdf/CV.pdf' | relative_url }}).

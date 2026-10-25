@@ -1,9 +1,18 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"EMNLP":
+  url: https://2026.emnlp.org/
+  color: "#0f766e"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ACL":
+  url: https://2026.aclweb.org/
+  color: "#b91c1c"
 
-"Vision":
-  color: "#009f36"
+"AISTATS":
+  url: https://aistats.org/
+  color: "#1d4ed8"
+
+"NeurIPS":
+  url: https://neurips.cc/
+  color: "#6d28d9"
+
+"Preprint":
+  color: "#64748b"

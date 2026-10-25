@@ -6,15 +6,15 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Hoang-Chau
 middle_name: 
 last_name: Luong
-email: lhchau20@apcs.fitus.edu.vn
+email: cl6300@rit.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Hoang-Chau Luong.
+  Hoang-Chau Luong is a Ph.D. student in Computer Science at Rochester Institute of Technology working on LLM post-training: knowledge distillation, unlearning, and robust fine-tuning.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: Hoang-Chau Luong, LLM, knowledge distillation, machine unlearning, LoRA, sharpness-aware minimization, RIT
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: favicon-exploding-head.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.svg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://lhchau.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -59,9 +59,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+og_image: https://lhchau.github.io/assets/img/chau.jpeg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -109,7 +109,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  Feel free to send me an email at <span style="text-decoration: underline; color: #4400ff;">cl6300@rit.edu</span>
+  I am always happy to chat about research and collaborations. The best way to reach me is by email at <a href="mailto:cl6300@rit.edu">cl6300@rit.edu</a>.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -164,13 +164,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+external_sources: []
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -240,9 +234,16 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  - _pages/blog.md
+  - _pages/projects.md
+  - _posts/
+  - _projects/
+  - assets/jupyter/
+  - assets/pdf/example_pdf.pdf
   - purgecss.config.js
   - README.md
   - readme_preview/
+  - requirements.txt
   - vendor
 keep_files:
   - CNAME
@@ -336,10 +337,10 @@ scholar:
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
 enable_publication_badges:
-  altmetric: true # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
-  dimensions: true # Dimensions badge (Customization options: https://badge.dimensions.ai/)
+  altmetric: false # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
+  dimensions: false # Dimensions badge (Customization options: https://badge.dimensions.ai/)
   google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
-  inspirehep: true # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
+  inspirehep: false # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
@@ -364,12 +365,13 @@ filtered_bibtex_keywords:
     selected,
     slides,
     supp,
+    tldr,
     video,
     website,
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 3 # leave blank to always show all authors
+max_author_limit: 5 # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
@@ -485,7 +487,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800|Material+Icons&display=swap"
   highlightjs:
     integrity:
       css:

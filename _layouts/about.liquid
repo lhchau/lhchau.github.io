@@ -1,51 +1,86 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+<div class="post about">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow reveal">{{ page.subtitle }}</p>
+      <h1 class="hero-name reveal">
+        {% if site.title == 'blank' %}
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+          {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
         {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+      </h1>
+      {% if page.tagline %}
+        <p class="hero-tagline reveal">{{ page.tagline }}</p>
+      {% endif %}
+      {% if page.venues %}
+        <p class="hero-venues reveal">
+          Published at
+          {% for venue in page.venues %}
+            <span class="venue-chip">{{ venue }}</span>
+          {% endfor %}
+        </p>
+      {% endif %}
+      <div class="hero-actions reveal">
+        <a class="btn-pill primary" href="{{ '/assets/pdf/CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-file-arrow-down"></i> CV
+        </a>
+        <a class="btn-pill" href="{{ '/publications/' | relative_url }}"><i class="fa-solid fa-book-open"></i> Publications</a>
+        {% if page.social %}
+          <div class="hero-social">{% include social.liquid %}</div>
         {% endif %}
       </div>
+    </div>
+    {% if page.profile.image %}
+      <div class="hero-photo reveal">
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% capture sizes %}(min-width: {{site.max_width}}) 300px, (min-width: 576px) 35vw, 80vw{% endcapture %}
+        {%
+          include figure.liquid loading="eager" path=profile_image_path class="img-fluid" sizes=sizes alt=site.first_name
+          cache_bust=true
+        %}
+      </div>
     {% endif %}
+  </section>
 
-    <div class="clearfix">{{ content }}</div>
+  <article>
+    <!-- Bio -->
+    <section class="about-section reveal">
+      <h2 class="section-title">About</h2>
+      <div class="bio">{{ content }}</div>
+    </section>
+
+    <!-- Research areas -->
+    {% if page.research %}
+      <section class="about-section">
+        <h2 class="section-title reveal">Research</h2>
+        <div class="research-grid">
+          {% for area in page.research %}
+            <div class="research-card reveal">
+              <div class="research-icon"><i class="{{ area.icon }}"></i></div>
+              <h3>{{ area.title }}</h3>
+              <p>{{ area.text }}</p>
+              <div class="research-tags">
+                {% for tag in area.tags %}<span>{{ tag }}</span>{% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <section class="about-section reveal">
+        <h2 class="section-title">
+          <a href="{{ '/news/' | relative_url }}">News</a>
+        </h2>
+        {% include news.liquid limit=true %}
+      </section>
     {% endif %}
 
     <!-- Latest posts -->
@@ -58,19 +93,45 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <section class="about-section">
+        <h2 class="section-title reveal">
+          <a href="{{ '/publications/' | relative_url }}">Selected Publications</a>
+        </h2>
+        {% include selected_papers.liquid %}
+        <p class="see-all reveal">
+          <a href="{{ '/publications/' | relative_url }}">All publications and preprints <i class="fa-solid fa-arrow-right"></i></a>
+        </p>
+      </section>
     {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
+    <!-- Education -->
+    {% if page.education %}
+      <section class="about-section">
+        <h2 class="section-title reveal">Education</h2>
+        <ul class="edu-timeline">
+          {% for edu in page.education %}
+            <li class="reveal">
+              <div class="timeline-head">
+                <span class="timeline-title">{{ edu.degree }}</span>
+                <span class="timeline-years">{{ edu.years }}</span>
+              </div>
+              <div class="timeline-sub">{{ edu.school }} · {{ edu.place }}</div>
+              <div class="timeline-detail">{{ edu.detail }}</div>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
 
+    <!-- Contact -->
+    {% if page.social %}
+      <section class="about-section contact-card reveal">
+        <h2 class="section-title">Get in touch</h2>
         <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
+        <div class="social">
+          <div class="contact-icons">{% include social.liquid %}</div>
+        </div>
+      </section>
     {% endif %}
 
     {% if site.newsletter.enabled and site.footer_fixed %}
