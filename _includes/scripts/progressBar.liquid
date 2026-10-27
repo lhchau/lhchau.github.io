@@ -38,6 +38,39 @@
         $(document).on('scroll', resizeProgressBar);
         $(window).on('resize', resizeProgressBar);
       }
+      setupHorse();
+    }
+
+    // Pony at the tip of the bar: faces the scroll direction and gallops while scrolling
+    function setupHorse() {
+      const horse = document.getElementById('progress-horse');
+      let lastY = getCurrentScrollPosition();
+      let facing = 1;
+      let stopTimer;
+
+      function moveHorse() {
+        const y = getCurrentScrollPosition();
+        const distance = getDistanceToScroll();
+        const ratio = distance > 0 ? Math.min(y / distance, 1) : 0;
+        const x = Math.max(0, ratio * window.innerWidth - horse.offsetWidth);
+        // Ignore tiny jitters (e.g. scroll anchoring) so the pony only turns on a real direction change
+        if (Math.abs(y - lastY) > 2) {
+          facing = y > lastY ? 1 : -1;
+          lastY = y;
+        }
+        horse.style.top = progressBar[0].getBoundingClientRect().top + 'px';
+        horse.style.transform = `translateX(${x}px) scaleX(${facing})`;
+      }
+
+      moveHorse();
+      horse.classList.add('ready');
+      $(document).on('scroll', function () {
+        moveHorse();
+        horse.classList.add('running');
+        clearTimeout(stopTimer);
+        stopTimer = setTimeout(() => horse.classList.remove('running'), 200);
+      });
+      $(window).on('resize', moveHorse);
     }
     /*
      * The vertical scroll position is the same as the number of pixels that

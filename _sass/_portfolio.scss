@@ -595,3 +595,81 @@ h6,
     animation: none;
   }
 }
+
+// Pony riding the scroll progress bar (markup: _includes/progress_horse.liquid)
+
+#progress-horse {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  z-index: 1031; // above the fixed navbar
+  width: 36px;
+  height: 27px;
+  margin-top: -26px; // hooves rest on the 1px bar
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &.ready {
+    opacity: 1;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .leg,
+  .horse-tail {
+    transform-box: fill-box;
+    transform-origin: 50% 0;
+  }
+
+  .horse-tail {
+    transform-origin: 100% 0;
+  }
+
+  &.running {
+    .horse-body {
+      animation: horse-bob 0.24s ease-in-out infinite alternate;
+    }
+    .leg-a {
+      animation: horse-leg 0.24s ease-in-out infinite alternate;
+    }
+    .leg-b {
+      animation: horse-leg 0.24s ease-in-out infinite alternate-reverse;
+    }
+    .horse-tail {
+      animation: horse-tail 0.24s ease-in-out infinite alternate;
+    }
+  }
+}
+
+@keyframes horse-leg {
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes horse-bob {
+  to {
+    transform: translateY(-1.5px);
+  }
+}
+
+@keyframes horse-tail {
+  to {
+    transform: rotate(-14deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #progress-horse.running * {
+    animation: none !important;
+  }
+}
