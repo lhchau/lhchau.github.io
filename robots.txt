@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://lhchau.github.io/sitemap.xml
